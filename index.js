@@ -3,7 +3,7 @@ const app=express();
 const config=require('./config');
 const Task=require('./models/Task');
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false})); // adding a global middleware.
 
 config.authenticate() // the promise
 .then(function(){ //fullfilled
